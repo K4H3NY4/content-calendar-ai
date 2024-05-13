@@ -25,7 +25,7 @@ if prompt:  # Check if prompt is not empty
         },
         {
             "role": "user",
-            "content": "pembe millers kenya"
+            "content":prompt,
         },
         {
             "role": "assistant",
@@ -39,6 +39,6 @@ if prompt:  # Check if prompt is not empty
     stop=None,
 )
   # Display the generated response
-    st.write(chat_completion.choices[0].message.content)
+  st.write(chat_completion.choices[0].message.content)
 else:
     st.write("Socials Calendar AI.")
