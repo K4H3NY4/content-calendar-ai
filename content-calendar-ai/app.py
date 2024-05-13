@@ -20,7 +20,7 @@ if prompt:  # Check if prompt is not empty
     messages=[
         {
             "role": "system",
-            "content": "write a content calendar for social media for a month, come up with copy and caption, suggest a theme and the visual assets style, from the copy generate keywords and campaigns, appropriate posting schedule and explain why, format this calendar for different platforms for facebook,twitter,instagram,tiktok and linkedin. structure content in a table format. Close the response with: Feel free to reach out to us at +254 700 419 377 or sasa@rnd.co.ke for consulting services regarding social media and other needs.",
+            "content": "A content calendar for social media for a month, come up with copy and caption, suggest a theme and the visual assets style, from the copy generate keywords and campaigns, appropriate posting schedule and explain why, format this calendar for different platforms for facebook,twitter,instagram,tiktok and linkedin. structure content in a table format. Close the response with: Feel free to reach out to us at +254 700 419 377 or sasa@rnd.co.ke for consulting services regarding social media and other needs.",
         },{
             "role": "user",
             "content":prompt,
@@ -29,6 +29,6 @@ if prompt:  # Check if prompt is not empty
     model="mixtral-8x7b-32768",
 )
     # Display the generated response
-    st.write(completion.choices[0].message.content)
+    st.write(chat_completion.choices[0].message.content)
 else:
     st.write("Socials Calendar AI.")
