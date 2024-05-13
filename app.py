@@ -34,7 +34,7 @@ if prompt:  # Check if prompt is not empty
     stream=True,
     stop=None,
 )
-  # Display the generated response
-  st.write(chat_completion.choices[0].message.content)
+    # Display the generated response
+    st.write(chat_completion.choices[0].message.content)
 else:
     st.write("Socials Calendar AI.")
