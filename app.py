@@ -17,7 +17,6 @@ prompt = st.text_input('Enter your question here')
 if prompt:  # Check if prompt is not empty
     # Generate response from the AI model
     completion = client.chat.completions.create(
-    model="llama3-70b-8192",
     messages=[
         {
             "role": "system",
@@ -28,11 +27,7 @@ if prompt:  # Check if prompt is not empty
             "content":prompt,
         }
     ],
-    temperature=1,
-    max_tokens=8000,
-    top_p=1,
-    stream=True,
-    stop=None,
+    model="llama3-70b-8192",
 )
     # Display the generated response
     st.write(chat_completion.choices[0].message.content)
