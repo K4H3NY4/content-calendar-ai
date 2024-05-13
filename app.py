@@ -26,7 +26,7 @@ if prompt:  # Check if prompt is not empty
             "content":prompt,
         }
     ],
-    model="llama3-70b-8192",
+    model="mixtral-8x7b-32768",
 )
     # Display the generated response
     st.write(chat_completion.choices[0].message.content)
