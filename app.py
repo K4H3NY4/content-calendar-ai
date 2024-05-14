@@ -27,8 +27,10 @@ if prompt:  # Check if prompt is not empty
         }
     ],
      model="llama3-70b-8192",
-     temperature=1,
-     max_tokens=7000,
+     max_tokens=8192,
+     top_p=1,
+     stream=True,
+     stop=None,
 )
     # Display the generated response
     st.write(completion.choices[0].message.content)
