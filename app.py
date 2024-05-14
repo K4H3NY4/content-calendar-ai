@@ -12,8 +12,7 @@ client = Groq(
 
 def simulate_processing():
     # Simulate some time-consuming task
-    time.sleep(3)
-    return "Brisnstorming completed. 🥳"
+    return "Brianstorm Completed 🥳"
 
 st.title('🧑‍💻Socials Calendar AI Assistant 👩‍💻')
 
