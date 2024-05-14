@@ -39,8 +39,8 @@ if prompt:  # Check if prompt is not empty
      #stop=None,
 )
     # Display the generated response
-    if st.button("Start Processing"):
-        with st.spinner("Processing..."):
+    if st.button("Brainstorm"):
+        with st.spinner("Brainstorm..."):
              result = simulate_processing()
              st.success(result)
              st.write(completion.choices[0].message.content)
