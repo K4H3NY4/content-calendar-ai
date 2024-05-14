@@ -44,4 +44,6 @@ if prompt:  # Check if prompt is not empty
              st.success(result)
              st.write(completion.choices[0].message.content)
 else:
+   
+    st.button("Brainstorm 🤯")
     st.write("Socials Calendar AI.")
