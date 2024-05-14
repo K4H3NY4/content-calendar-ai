@@ -30,7 +30,7 @@ if prompt:  # Check if prompt is not empty
      max_tokens=8192,
      top_p=1,
      stream=True,
-     stop=None,
+     #stop=None,
 )
     # Display the generated response
     st.write(completion.choices[0].message.content)
