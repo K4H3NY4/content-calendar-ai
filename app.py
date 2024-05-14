@@ -2,12 +2,18 @@ import os
 import streamlit as st
 from groq import Groq
 from dotenv import load_dotenv
+import time
 
 load_dotenv()
 
 client = Groq(
        api_key=os.environ.get('API_KEY')
 )
+
+def simulate_processing():
+    # Simulate some time-consuming task
+    time.sleep(3)
+    return "Processing completed."
 
 st.title('Socials Calendar AI Assistant')
 
@@ -33,7 +39,10 @@ if prompt:  # Check if prompt is not empty
      #stop=None,
 )
     # Display the generated response
-    st.spinner("Processing...")
-    st.write(completion.choices[0].message.content)
+    if st.button("Start Processing"):
+        with st.spinner("Processing..."):
+             result = simulate_processing()
+             st.success(result)
+             st.write(completion.choices[0].message.content)
 else:
     st.write("Socials Calendar AI.")
