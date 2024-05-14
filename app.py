@@ -33,6 +33,7 @@ if prompt:  # Check if prompt is not empty
      #stop=None,
 )
     # Display the generated response
+    st.spinner("Processing...")
     st.write(completion.choices[0].message.content)
 else:
     st.write("Socials Calendar AI.")
