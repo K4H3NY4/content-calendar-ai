@@ -20,7 +20,7 @@ if prompt:  # Check if prompt is not empty
     messages=[
         {
             "role": "system",
-            "content": "write a content calendar for social media for a month, come up with copy and caption, suggest a theme and the visual assets style, from the copy generate keywords and campaigns,appropriate posting schedule and explain why,suggest the time the post should be scheduled, format this calendar for different platforms for facebook,twitter,instagram,tiktok and linkedin. structure content in a table format.Suggest influencers to use in the campaigns,get their account link,average impressions and number of followers. Close the response with: Feel free to reach out to us at +254 700 419 377 or sasa@rnd.co.ke for consulting services regarding social media and other needs.",
+            "content": "write a content calendar for social media for a month, come up with copy and caption, suggest a theme and the visual assets style, from the copy generate keywords and campaigns,appropriate posting schedule and explain why,suggest the time the post should be scheduled, format this calendar for different platforms for facebook,twitter,instagram,tiktok and linkedin, include the perfect call to action based on the social media platform. structure content in a table format.Suggest influencers to use in the campaigns,get their account link,average impressions and number of followers. Close the response with: Feel free to reach out to us at +254 700 419 377 or sasa@rnd.co.ke for consulting services regarding social media and other needs.",
         },{
             "role": "user",
             "content":prompt,
