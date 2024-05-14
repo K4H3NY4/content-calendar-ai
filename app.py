@@ -13,7 +13,7 @@ client = Groq(
 def simulate_processing():
     # Simulate some time-consuming task
     time.sleep(3)
-    return "Processing completed."
+    return "Brisnstorming completed."
 
 st.title('Socials Calendar AI Assistant')
 
@@ -40,7 +40,7 @@ if prompt:  # Check if prompt is not empty
 )
     # Display the generated response
     if st.button("Brainstorm"):
-        with st.spinner("Brainstorm..."):
+        with st.spinner("Brainstorming ..."):
              result = simulate_processing()
              st.success(result)
              st.write(completion.choices[0].message.content)
