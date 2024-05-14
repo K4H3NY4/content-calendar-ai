@@ -12,6 +12,7 @@ client = Groq(
 
 def simulate_processing():
     # Simulate some time-consuming task
+    time.sleep(3)
     return "Brianstorm Completed 🥳"
 
 st.title('🧑‍💻Socials Calendar AI Assistant 👩‍💻')
@@ -48,4 +49,3 @@ else:
         with st.spinner("Brainstorming 🤯🤯🤯"):
              result = simulate_processing()
              st.success(result)
-             
