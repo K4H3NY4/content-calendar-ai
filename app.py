@@ -26,9 +26,9 @@ if prompt:  # Check if prompt is not empty
             "content":prompt,
         }
     ],
-     model="mixtral-8x7b-32768",
+     model="llama3-70b-8192",
      temperature=1,
-     max_tokens=30000,
+     max_tokens=7000,
 )
     # Display the generated response
     st.write(completion.choices[0].message.content)
