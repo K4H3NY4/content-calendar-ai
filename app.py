@@ -15,9 +15,9 @@ def simulate_processing():
     time.sleep(3)
     return "Brisnstorming completed. 🥳"
 
-st.title('Socials Calendar AI Assistant')
+st.title('🧑‍💻Socials Calendar AI Assistant 👩‍💻')
 
-prompt = st.text_input('Enter your question here')
+prompt = st.text_input('Enter social media brief here')
 
 
 if prompt:  # Check if prompt is not empty
