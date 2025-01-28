@@ -7,14 +7,21 @@ import time
 # Load environment variables
 load_dotenv()
 
+# Retrieve API key and validate
+api_key = os.environ.get('API_KEY')
+if not api_key:
+    raise ValueError("API_KEY is missing. Please set it in the .env file.")
+
 # Initialize the Groq client
-client = Groq(
-    api_key=os.environ.get('API_KEY')  # Ensure API_KEY exists in your .env file
-)
+try:
+    client = Groq(api_key=api_key)
+except Exception as e:
+    st.error(f"Failed to initialize Groq client: {e}")
+    raise
 
 def simulate_processing():
     """Simulate a time-consuming task."""
-    time.sleep(3)  # Simulates processing delay
+    time.sleep(3)
     return "Brainstorm Completed 🥳"
 
 # Streamlit app UI
