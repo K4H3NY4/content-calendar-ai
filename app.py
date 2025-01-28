@@ -32,7 +32,7 @@ if prompt:  # Check if prompt is not empty
             "content":prompt,
         }
     ],
-     model="llama3-70b-8192",
+        model="deepseek-r1-distill-llama-70b",
      max_tokens=8192,
      top_p=1,
      #stream=True,
