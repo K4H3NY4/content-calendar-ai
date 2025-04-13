@@ -19,7 +19,8 @@ prompt = st.text_input('Enter social media brief here')
 # Add button to trigger brainstorming
 if st.button("🚀 Start Brainstorming") and prompt:
     with st.spinner("Generating your content calendar..."):
-        client = Groq(api_key=os.environ.get('API_KEY'))
+        client = GroqClient(api_key=os.environ.get('API_KEY'))
+
 
         completion = client.chat.completions.create(
             model="llama3-8b-8192",
