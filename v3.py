@@ -2,8 +2,7 @@ import os
 import time
 import streamlit as st
 from dotenv import load_dotenv
-from groq import GroqClient
-
+from groq import Groq
 
 load_dotenv()
 
@@ -19,8 +18,7 @@ prompt = st.text_input('Enter social media brief here')
 # Add button to trigger brainstorming
 if st.button("🚀 Start Brainstorming") and prompt:
     with st.spinner("Generating your content calendar..."):
-        client = GroqClient(api_key=os.environ.get('API_KEY'))
-
+        client = Groq(api_key=os.environ.get('API_KEY'))
 
         completion = client.chat.completions.create(
             model="llama3-8b-8192",
