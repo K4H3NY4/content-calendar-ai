@@ -9,13 +9,8 @@ st.title('🧑‍💻 Socials Calendar AI Assistant')
 
 def generate_content(prompt: str, client: Groq) -> str:
     """Generate content using Groq API"""
-    system_prompt = """Create a social media content calendar including:
-    - Brand strategy and target audience analysis
-    - Content direction and themes
-    - Monthly content calendar for Facebook, Twitter, Instagram, TikTok, LinkedIn
-    - Post scheduling recommendations
-    - Influencer suggestions with metrics
-    Format in clear sections with tables where appropriate."""
+    system_prompt = """write a content calendar for social media for a month, Suggest the best tone to use in the communication, create sample copy matching the suggested tone. suggest a catchy and clever caption, suggest a theme and the visual assets style, from the copy generate keywords and campaigns, appropriate posting schedule and explain why, suggest the time the post should be scheduled, format this calendar for different platforms for facebook, twitter, instagram, tiktok and linkedin, include the perfect call to action based onthe social media platform. structure content in a table format. Suggest influencers to use in the campaigns, get their account link, average impressionsand number of followers. On top of the response outline a well detailed brand strategy to be used on the target audience, content direction in detail, target audience, age group, tone, theme, visual style and list of keywords. Close the response with: Feel free to reach out to us at +254 700 419 377 or sasa@rnd.co.ke for consulting services regarding social media and other needs."
+."""
 
     completion = client.chat.completions.create(
         model="llama3-8b-8192",
