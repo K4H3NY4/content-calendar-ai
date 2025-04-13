@@ -2,7 +2,8 @@ import os
 import time
 import streamlit as st
 from dotenv import load_dotenv
-from groq import Groq
+from groq import GroqClient
+
 
 load_dotenv()
 
